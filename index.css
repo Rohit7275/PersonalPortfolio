@@ -1,0 +1,597 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Open Sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #fff;
+    background-color: #2a2a2a;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'poppins';
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.aside {
+    background-color: gold;
+    height: 100%;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside span {
+    font-size: 80px;
+    opacity: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    padding: 1px 0px;
+}
+
+.grid {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: -1;
+}
+
+.grid-line {
+    flex-basis: 20%;
+    position: relative;
+    border-right: 1px solid hsla(0, 0%, 100%, .1);
+}
+
+section {
+    margin-bottom: 16%;
+}
+
+.heading-wrap {
+    height: 114px;
+    margin-bottom: 60px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-left: auto;
+}
+
+.heading-wrap h2 {
+    font-size: 110px;
+    margin: 0px;
+    line-height: 1;
+    font-weight: 800;
+    position: relative;
+}
+
+.heading-wrap h2 span {
+    font-size: 200px;
+    color: purple;
+    line-height: 0;
+}
+
+.heading-wrap .line {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.huge-text {
+    font-size: 250px;
+    position: absolute;
+    font-family: Poppins, sans-serif;
+    color: rgba(90, 90, 90, .1);
+    font-weight: 800;
+    pointer-events: none;
+    z-index: -1;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*=============================================
+=                   HEADER                   =
+=============================================*/
+
+
+/*============  End of HEADER  =============*/
+
+/*=============================================
+=                 HERO SECTION                 =
+=============================================*/
+
+.hero {
+    margin-left: 5%;
+    margin-bottom: 19%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-shape {
+    position: absolute;
+    width: clamp(300px, 30vw, 430px);
+    height: clamp(300px, 30vw, 430px);
+    border-radius: 39% 60% 72% 30%/48% 48% 56% 54%;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-animation: morph 7s linear infinite;
+    animation: morph 7s linear infinite;
+    background-color: gold;
+    color: purple;
+}
+
+@-webkit-keyframes morph {
+    0% {
+        border-radius: 42% 68% 70% 30%/45% 45% 55% 55%;
+    }
+
+    25% {
+        border-radius: 38% 58% 60% 36%/48% 50% 60% 57%;
+    }
+
+    32% {
+        border-radius: 38% 62% 65% 33%/48% 50% 60% 57%;
+    }
+
+    50% {
+        border-radius: 41% 62% 65% 32%/46% 47% 57% 56%;
+    }
+
+    75% {
+        border-radius: 36% 58% 60% 36%/48% 50% 60% 57%;
+    }
+
+    85% {
+        border-radius: 38% 60% 65% 34%/46% 48% 58% 56%;
+    }
+
+    100% {
+        border-radius: 42% 68% 70% 30%/45% 45% 55% 55%;
+    }
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 42% 68% 70% 30%/45% 45% 55% 55%;
+    }
+
+    25% {
+        border-radius: 38% 58% 60% 36%/48% 50% 60% 57%;
+    }
+
+    32% {
+        border-radius: 38% 62% 65% 33%/48% 50% 60% 57%;
+    }
+
+    50% {
+        border-radius: 41% 62% 65% 32%/46% 47% 57% 56%;
+    }
+
+    75% {
+        border-radius: 36% 58% 60% 36%/48% 50% 60% 57%;
+    }
+
+    85% {
+        border-radius: 38% 60% 65% 34%/46% 48% 58% 56%;
+    }
+
+    100% {
+        border-radius: 42% 68% 70% 30%/45% 45% 55% 55%;
+    }
+}
+
+.hero-header,
+.intro-shape {
+    padding: 1px 0;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 12vw, 160px);
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    font-weight: 800;
+    max-width: 800px;
+}
+
+.description {
+    padding: 40px 80px;
+    align-self: center;
+    max-width: 654px;
+    position: relative;
+}
+
+.description-decoration {
+    position: absolute;
+    right: -15px;
+    top: 15px;
+    width: 100%;
+    height: 100%;
+    content: "";
+    border: 1px solid purple;
+    z-index: -1;
+}
+
+.border-top {
+    background-color: gold;
+    width: 0%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.border-right {
+    background-color: gold;
+    width: 1px;
+    height: 0%;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+.border-bottom {
+    background-color: gold;
+    width: 0%;
+    height: 1px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.border-left {
+    background-color: gold;
+    width: 1px;
+    height: 0%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.description h2 {
+    font-size: 24px;
+    line-height: 2;
+    color: gold;
+    font-weight: 100;
+    font-family: "Open Sans";
+    letter-spacing: 2px;
+}
+
+/*==========  End of HERO SECTION  ===========*/
+
+/*=============================================
+=                   PROJECTS                   =
+=============================================*/
+
+.projects {
+    position: relative;
+}
+
+.projects .huge-text {
+    top: 25%;
+}
+
+.projects .polygon {
+    position: absolute;
+}
+
+.projects .polygon.first {
+    top: 40%;
+    left: 6%;
+    rotate: 32deg;
+}
+
+.projects .polygon.second {
+    top: 60%;
+    right: 3%;
+    rotate: -17deg;
+}
+
+.projects li {
+    margin-bottom: 8%;
+    width: 100%;
+    height: 100%;
+    max-width: 550px;
+    position: relative;
+}
+
+.projects li:nth-child(even) {
+    margin-left: auto;
+}
+
+.projects li .cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: gold;
+}
+
+.projects li:nth-child(even) .cover {
+    background: purple;
+}
+
+.projects li .corner-decoration {
+    position: absolute;
+    background-color: gold;
+}
+
+.projects li .corner-decoration:first-of-type {
+    height: 20%;
+    width: 1px;
+    transform-origin: top;
+    left: -30px;
+    top: -30px;
+}
+
+.projects li .corner-decoration:last-of-type {
+    height: 1px;
+    width: 20%;
+    transform-origin: left;
+    left: -30px;
+    top: -30px;
+}
+
+.projects li:nth-child(even) .corner-decoration:first-of-type,
+.projects li:nth-child(even) .corner-decoration:last-of-type {
+    left: unset;
+    right: -30px;
+}
+
+.projects li a {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    transition: 0.4s ease-in;
+    aspect-ratio: 2/1.3;
+}
+
+.projects li:hover a {
+    scale: 0.9;
+    opacity: 0.4 !important;
+}
+
+.projects li img {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: 0.4s ease-in;
+}
+
+.projects li:hover img {
+    scale: 1.2 !important;
+}
+
+.projects li .project-cta {
+    position: absolute;
+    color: white;
+    background-color: hsla(0, 0%, 39.2%, .8);
+    padding: 25px 80px;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: -60px;
+}
+
+.projects li:nth-child(even) .project-cta {
+    rotate: 90deg;
+}
+
+.projects li .project-cta span {
+    opacity: 0;
+    transition: .6s;
+    letter-spacing: 5px;
+    transform: translateY(10px);
+    display: block;
+}
+
+.projects li:hover .project-cta span {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/*============  End of PROJECTS  =============*/
+
+/*=============================================
+=                   SKILLS                   =
+=============================================*/
+
+.huge-text {
+    right: -30px;
+}
+
+.skills .heading-wrap {
+    margin-left: 0px;
+}
+
+.skills .heading-wrap .line {
+    right: unset;
+    left: 0;
+}
+
+.slills-container {
+    display: flex;
+    gap: clamp(50px, 6vw, 80px);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .categories {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    padding: 50px;
+}
+
+.skills .categories ul {
+    margin: 20px 0;
+}
+
+.skills .categories li {
+    font-size: 20px;
+    line-height: 2;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    color: gold;
+}
+
+.skills .skills-list {
+    width: 100%;
+    max-width: 640px;
+}
+
+.skills .skills-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.skills .skills-list li {
+    padding: 20px 40px;
+    border-radius: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    background-color: purple;
+}
+
+/*============  End of SKILLS  =============*/
+
+/*=============================================
+=                   CONTACT                   =
+=============================================*/
+
+.contact {
+    margin-bottom: 12%;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: gold;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 2;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-info a span {
+    translate: -30px;
+    opacity: 0;
+    transition: 0.4s ease-out;
+}
+
+.contact-info a:hover span {
+    translate: 0px;
+    opacity: 1;
+}
+
+/*============  End of CONTACT  =============*/
+
+/*=============================================
+=                   FOOTER                   =
+=============================================*/
+
+footer {
+    padding: 30px 0 20px;
+    border-top: 1px solid hsla(0, 0%, 100%, .1);
+    background-color: #2a2a2a;
+}
+
+footer>div {
+    width: 100%;
+    max-width: 1300px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    margin: 0 auto;
+}
+
+footer>div>span {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+footer>div>div {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+footer a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+}
+
+footer a svg {
+    width: 100%;
+    height: auto;
+}
+
+footer a svg path {
+    fill: purple;
+}
+
+/*============  End of FOOTER  =============*/
