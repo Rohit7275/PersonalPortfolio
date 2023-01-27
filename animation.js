@@ -114,7 +114,7 @@ window.onload=function() {
     
     /*============  End of SKILLS  =============*/
 
-    gsap.to(".contact .heading-wrap", { y: -60, scrollTrigger: { trigger: ".contact .heading-wrap", scrub: true } });
+    gsap.to(".contact .heading-wrap", { y: -40, scrollTrigger: { trigger: ".contact .heading-wrap", scrub: true } });
     gsap.to(".contact .contact-info", { y: -40, scrollTrigger: { trigger: ".contact .heading-wrap", scrub: true } });
 
 
