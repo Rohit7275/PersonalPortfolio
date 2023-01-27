@@ -4,6 +4,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -75,11 +76,10 @@ a {
 }
 
 section {
-    margin-bottom: 16%;
+    margin-bottom: clamp(120px, 16%, 200px);
 }
 
 .heading-wrap {
-    height: 114px;
     margin-bottom: 60px;
     overflow: hidden;
     display: flex;
@@ -92,7 +92,7 @@ section {
 }
 
 .heading-wrap h2 {
-    font-size: 110px;
+    font-size: clamp(32px, 9vw, 110px);
     margin: 0px;
     line-height: 1;
     font-weight: 800;
@@ -100,7 +100,7 @@ section {
 }
 
 .heading-wrap h2 span {
-    font-size: 200px;
+    font-size: clamp(50px, 14vw, 200px);
     color: purple;
     line-height: 0;
 }
@@ -116,7 +116,7 @@ section {
 }
 
 .huge-text {
-    font-size: 250px;
+    font-size: clamp(100px, 17.8vw, 250px);
     position: absolute;
     font-family: Poppins, sans-serif;
     color: rgba(90, 90, 90, .1);
@@ -132,19 +132,12 @@ ul {
 }
 
 /*=============================================
-=                   HEADER                   =
-=============================================*/
-
-
-/*============  End of HEADER  =============*/
-
-/*=============================================
 =                 HERO SECTION                 =
 =============================================*/
 
 .hero {
+    margin-bottom: clamp(130px, 5%, 200px);
     margin-left: 5%;
-    margin-bottom: 19%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -229,7 +222,7 @@ ul {
 }
 
 .hero h1 {
-    font-size: clamp(40px, 12vw, 160px);
+    font-size: clamp(40px, 13vw, 160px);
     margin-top: 60px;
     display: flex;
     flex-direction: column;
@@ -317,6 +310,7 @@ ul {
 
 .projects .polygon {
     position: absolute;
+    z-index: -1;
 }
 
 .projects .polygon.first {
@@ -460,7 +454,7 @@ ul {
 
 .slills-container {
     display: flex;
-    gap: clamp(50px, 6vw, 80px);
+    gap: clamp(40px, 6vw, 80px);
     align-items: center;
     justify-content: space-between;
 }
@@ -496,7 +490,7 @@ ul {
 }
 
 .skills .skills-list li {
-    padding: 20px 40px;
+    padding: 16px 30px;
     border-radius: 20px;
     font-size: 18px;
     letter-spacing: 2px;
@@ -595,3 +589,208 @@ footer a svg path {
 }
 
 /*============  End of FOOTER  =============*/
+
+@media(max-width: 1200px) {
+    /*=============================================
+    =                   HERO                   =
+    =============================================*/
+
+    .description {
+        padding: 30px 60px;
+        max-width: 580px;
+    }
+
+    .description h2 {
+        font-size: 22px;
+    }
+
+    /*============  End of HERO  =============*/
+}
+
+@media(max-width: 1024px) {
+    /*=============================================
+    =                   HERO                   =
+    =============================================*/
+
+    .hero h1 {
+        margin-bottom: 110px;
+    }
+
+    .description h2 {
+        font-size: 20px;
+    }
+
+    /*============  End of HERO  =============*/
+
+    /*=============================================
+    =                   PROJECTS                   =
+    =============================================*/
+
+    .projects .heading-wrap {
+        margin-bottom: 90px;
+    }
+
+    .projects li {
+        margin-bottom: 80px;
+        max-width: 510px;
+    }
+
+    /*============  End of PROJECTS  =============*/
+
+    /*=============================================
+    =                   SKILLS                   =
+    =============================================*/
+
+    .slills-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .skills .skills-list {
+        max-width: unset;
+    }
+
+    /*============  End of SKILLS  =============*/
+}
+
+@media(max-width: 768px) {
+    .hero h1 {
+        font-size: clamp(40px, 14vw, 160px);
+    }
+
+    .intro-shape {
+        width: clamp(200px, 40vw, 500px);
+        height: clamp(200px, 40vw, 500px);
+    }
+
+    /*=============================================
+    =                   PROJECTS                   =
+    =============================================*/
+
+    .projects li {
+        max-width: 460px;
+    }
+
+    .projects li:nth-child(even) .project-cta {
+        rotate: 0deg;
+    }
+
+    .projects li .project-cta {
+        right: -38px;
+    }
+
+    .projects li .project-cta {
+        padding: 20px 50px;
+    }
+
+    /*============  End of PROJECTS  =============*/
+    /*=============================================
+    =                   SKILLS                   =
+    =============================================*/
+
+    .skills .categories {
+        max-width: 410px;
+        padding: 16px 30px;
+    }
+
+    .skills .categories li {
+        font-size: 18px;
+    }
+
+    .skills .skills-list li {
+        font-size: 16px;
+        padding: 14px 25px;
+    }
+
+    /*============  End of SKILLS  =============*/
+    /*=============================================
+    =                   HERO                   =
+    =============================================*/
+
+    .description {
+        padding: 25px 50px;
+        max-width: 500px;
+    }
+
+    .description h2 {
+        font-size: 18px;
+    }
+
+    /*============  End of HERO  =============*/
+}
+
+@media(max-width:600px) {
+    .heading-wrap h2 {
+        font-size: clamp(32px, 10vw, 50px);
+    }
+
+    .contact-info a {
+        font-size: 18px;
+    }
+
+    /*=============================================
+    =                   HERO                   =
+    =============================================*/
+
+    .hero {
+        margin-left: 0px;
+    }
+
+    .hero h1 {
+        font-size: clamp(60px, 18vw, 100px);
+    }
+
+    .intro-shape {
+        width: clamp(200px, 50vw, 500px);
+        height: clamp(200px, 50vw, 500px);
+    }
+
+    .description {
+        padding: 25px 40px;
+    }
+
+    .description h2 {
+        font-size: 16px;
+    }
+
+    /*============  End of HERO  =============*/
+    /*=============================================
+    =                   PROJECTS                   =
+    =============================================*/
+
+    .projects li {
+        max-width: 420px;
+    }
+
+    .projects li .corner-decoration:first-of-type,
+    .projects li .corner-decoration:last-of-type {
+        top: -20px;
+        left: -20px;
+    }
+
+    .projects li:nth-child(even) .corner-decoration:first-of-type,
+    .projects li:nth-child(even) .corner-decoration:last-of-type {
+        right: -20px;
+    }
+
+    .projects .heading-wrap {
+        margin-bottom: 110px;
+    }
+
+    /*============  End of PROJECTS  =============*/
+    /*=============================================
+    =                   FOOTER                   =
+    =============================================*/
+
+    footer>div {
+        padding: 0px 25px;
+        gap: 60px;
+    }
+
+    footer a {
+        width: 30px;
+        height: 30px;
+    }
+
+    /*============  End of FOOTER  =============*/
+}
