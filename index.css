@@ -797,6 +797,10 @@ footer a svg path {
 }
 
 @media(max-width: 480px) { 
+    .container {
+        width: 100%;
+        padding: 1px 22px;
+    }
     .skills .categories {
         padding: 16px 20px;
 }
